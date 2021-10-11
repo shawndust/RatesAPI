@@ -64,7 +64,7 @@ class RateResource(val service: RateService) {
 
 		// If the reservation spans more than one day, it is unavailable
 		if (!startDateEqualsEndDate(start, end)){
-				return unavailable
+			return unavailable
 		}
 
 		val listOfRates = service.findRates(findDayOfWeek(start))
